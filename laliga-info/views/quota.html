@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>西甲四强数据显示</title>
+    <link href="../styles/common.css" rel="stylesheet">
+    <script src="../scripts/Plugin/jquery-3.3.1.min.js"></script>
+    <script src="../scripts/Plugin/echarts.min.js"></script>
+    <script src="../scripts/Plugin/bmap.min.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=LelFSt6BfykGf8m3PB5zr8LaXAG2cMg6"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/quota.js"></script>
+</head>
+<body>
+<!--顶部-->
+<header class="header left">
+    <div class="header_center left" style="position:relative">
+        <h2 style="margin-right: -1000px"><strong>西甲四强数据展示</strong></h2>
+    </div>
+</header>
+<!--内容部分-->
+<div class="con left">
+  <!--数据总概-->
+
+    <!--统计分析图-->
+    <div class="div_any">
+        <div class="left div_any01">
+            <div class="div_any_child">
+                <div class="div_any_title">球队赛季进展</div>
+                <p id="histogramChart1" class="p_chart"></p>
+            </div>
+            <div class="div_any_child">
+                <div class="div_any_title">场均控球率</div>
+                <p id="histogramChart2" class="p_chart"></p>
+            </div>
+        </div>
+        <div class="left div_any01">
+            <div class="div_any_child">
+                <div class="div_any_title">球队资金投入</div>
+                <p id="lineChart1" class="p_chart"></p>
+            </div>
+            <div class="div_any_child">
+                <div class="div_any_title">场均上座量</div>
+                <p id="lineChart2" class="p_chart"></p>
+            </div>
+        </div>
+        <div class="left div_any01">
+            <div class="div_any_child">
+                <div class="div_any_title">>场均进球数(%)</div>
+                <p id="histogramChart3" class="p_chart"></p>
+            </div>
+            <div class="div_any_child">
+                <div class="div_any_title">视频点击量</div>
+                <p id="histogramChart4" class="p_chart"></p>
+            </div>
+        </div>
+        <div class="left div_any01">
+            <div class="div_any_child">
+                <div class="div_any_title">球迷占比</div>
+                <p id="pieChart1" class="p_chart"></p>
+            </div>
+            <div class="div_any_child">
+                <div class="div_any_title">关注度占比</div>
+                <p id="pieChart2" class="p_chart"></p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<title>globe</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/app.css" />
+		<style>
+			.saying:after {
+				content: "|";
+				font-family: Arial, sans-serif;
+				font-size: 20px;
+				color: #0D8BBD;
+				line-height: 0;
+				display: inline-block;
+				vertical-align: baseline;
+				opacity: 2;
+				animation: caret 500ms infinite;
+			}
+
+		</style>
+		<script language="javascript">
+			var index=0;
+			var word;
+			function type(){
+				var typePanel = document.getElementById("aa");
+				typePanel.innerText = word.substring(0,index++);
+				if(index % 3 == 0){
+					typePanel.className = "";
+				}else if(index % 3 == 1){
+					typePanel.className = "saying";
+				}
+			}
+			window.onload=function(){
+				word=document.getElementById("w").innerHTML;
+				setInterval(type, 70);
+				doUpdate();
+			}
+
+			var num = 27; //倒计时的秒数
+			var URL = "../entity/login.html";
+			var id = window.setInterval('doUpdate()', 1000);
+			function doUpdate() {
+				document.getElementsByTagName('body').innerHTML = '将在'+num+'秒后自动跳转到首页' ;
+				if(num == 0) {
+					window.clearInterval(id);
+					window.location = URL ;
+				}
+				num --;
+			}
+		</script>
+	</head>
+	
+	<body class="bg05">
+		<header class="header">
+			<h3>写在前面</h3>
+		</header>
+
+
+
+		<div class="text" style="background-color: #0d3349;width: 750px;float:left;margin-left: 20px">
+			<pre id="aa" class="saying" style="font-size: 20px;color: #0D8BBD;font-style: italic"></pre>
+			<div style="display:none;" id="w">    本项目的主题是足球数据可视化
+目的是希望将比赛的数据以可视化图形的方式呈现出来
+根据真实的比赛信息绘制图表，可绘制的图表类型
+包含柱形图、饼状图、折现图、树图、指数图谱网络等
+在做项目的过程中，实现的功能包括：
+1.基本的数据可视化功能及功能扩展
+2.轮播图功能
+3.自动打字功能
+4.旋转地球功能
+5.柱状图的动态排序功能
+6.三维立体柱状图
+7.调用GPS卫星地图
+8.烟花效果的实现
+9.图片的自动放大
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<div class="container-fluid">
+				<div class="row fill-h" >
+					<div class="col-lg-5 fill-h" style="margin-left: 850px;margin-top: 0px">
+						<div class="xpanel-wrapper xpanel-wrapper-2-3">
+							<div class="xpanel">
+								<div class="fill-h" id="globe3D"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="../js/echarts.js"></script>
+		<script type="text/javascript" src="../js/echarts-gl.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				/****************** 3D地球 ********************/
+				//初始化echart实例
+
+				const globe3D = echarts.init(document.getElementById("globe3D"));
+				//配置项
+				const globeOpt = {
+				    globe: {
+				    	environment: 'img/bg09.jpg', //环境贴图
+				        baseTexture: "img/globe.jpg", //地球的纹理
+				        heightTexture: "img/globe.jpg", //地图的高度纹理
+				        displacementScale: 0, //地球顶点位移的大小
+				        shading: 'realistic', //着色效果，真实感渲染
+				        realisticMaterial: { //真实感渲染配置
+				            roughness: 0.8 //材质的粗糙度
+				        },
+				        postEffect: { //后处理特效配置
+				            enable: true
+				        },
+				        light: { //光照设置
+				            main: { //场景主光源设置，在globe设置中就是太阳光
+				                intensity: 5, //主光源强度
+				                shadow: true //是否投影
+				            },
+				            ambientCubemap: { //使用纹理作为光源的环境光， 会为物体提供漫反射和高光反射
+				                texture: 'img/pisa.hdr', //环境光贴图
+				                diffuseIntensity: 0.1 //漫反射强度
+				            }
+				        }
+				    }
+				};
+				//渲染图表
+				globe3D.setOption(globeOpt);
+
+				/********** 浏览器窗口改变时，重置报表大小 ****************/
+				window.onresize = function() {
+					globe3D.resize();
+				}
+			});
+		</script>
+	</body>
+</html>

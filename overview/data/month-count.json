@@ -1,0 +1,142 @@
+[
+	{
+		"month": "1",
+		"sh_market_capitalization": 3
+	},
+	{
+		"month": "2",
+		"sh_market_capitalization": 6
+	},
+	{
+		"month": "3",
+		"sh_market_capitalization": 9
+	},
+	{
+		"month": "4",
+		"sh_market_capitalization": 12
+	},
+	{
+		"month": "5",
+		"sh_market_capitalization": 13
+	},
+	{
+		"month": "6",
+		"sh_market_capitalization": 16
+	},
+	{
+		"month": "7",
+		"sh_market_capitalization": 17
+	},
+	{
+		"month": "8",
+		"sh_market_capitalization": 20
+	},
+	{
+		"month": "9",
+		"sh_market_capitalization":23
+	},
+	{
+		"month": "10",
+		"sh_market_capitalization":24
+	},{
+	"month": "11",
+	"sh_market_capitalization": 27
+},{
+	"month": "12",
+	"sh_market_capitalization": 30
+},
+	{
+		"month": "13",
+		"sh_market_capitalization": 33
+	},
+
+
+	{
+		"month": "14",
+		"sh_market_capitalization":36
+	},
+	{
+		"month": "15",
+		"sh_market_capitalization": 37
+	},
+	{
+		"month": "16",
+		"sh_market_capitalization":40
+	},
+	{
+		"month": "17",
+		"sh_market_capitalization": 43
+	},
+	{
+		"month": "18",
+		"sh_market_capitalization": 46
+	},
+	{
+		"month": "19",
+		"sh_market_capitalization":46
+	},
+	{
+		"month": "20",
+		"sh_market_capitalization": 49
+	},
+	{
+		"month": "21",
+		"sh_market_capitalization": 52
+	},
+	{
+		"month": "22",
+		"sh_market_capitalization": 53
+	},
+	{
+		"month": "23",
+		"sh_market_capitalization": 56
+	},
+	{
+		"month": "24",
+		"sh_market_capitalization": 59
+	},
+	{
+		"month": "25",
+		"sh_market_capitalization": 60
+	},
+	{
+		"month": "26",
+		"sh_market_capitalization":60
+	},{
+	"month": "27",
+	"sh_market_capitalization": 63
+},{
+	"month": "28",
+	"sh_market_capitalization":66
+},{
+	"month": "29",
+	"sh_market_capitalization": 66
+},{
+	"month": "30",
+	"sh_market_capitalization":69
+},{
+	"month": "31",
+	"sh_market_capitalization":72
+},{
+	"month": "32",
+	"sh_market_capitalization": 73
+},{
+	"month": "33",
+	"sh_market_capitalization": 76
+},{
+	"month": "34",
+	"sh_market_capitalization":79
+},{
+	"month": "35",
+	"sh_market_capitalization": 82
+},{
+	"month": "36",
+	"sh_market_capitalization":85
+},{
+	"month": "37",
+	"sh_market_capitalization": 86
+},{
+	"month": "38",
+	"sh_market_capitalization": 89
+}
+]

@@ -1,0 +1,114 @@
+[
+	{
+		"code": "A",
+		"industry": "梅西",
+		"alias": "梅西",
+		"sh_stock": 15,
+		"sz_stock": 26,
+		"stock": 90
+	},
+	{
+		"code": "B",
+		"industry": "苏亚雷斯",
+		"alias": "苏亚雷斯",
+		"sh_stock": 51,
+		"sz_stock": 26,
+		"stock": 70
+	},
+	{
+		"code": "C",
+		"industry": "库蒂尼奥",
+		"alias": "库蒂尼奥",
+		"sh_stock": 828,
+		"sz_stock": 1471,
+		"stock": 60
+	},
+	{
+		"code": "D",
+		"industry": "内马尔",
+		"alias": "内马马",
+		"sh_stock": 66,
+		"sz_stock": 47,
+		"stock": 60
+	},
+	{
+		"code": "E",
+		"industry": "阿斯帕斯",
+		"alias": "阿斯帕斯",
+		"sh_stock": 50,
+		"sz_stock": 49,
+		"stock": 20
+	},
+	{
+		"code": "F",
+		"industry": "拉基蒂奇",
+		"alias": "拉基蒂奇",
+		"sh_stock": 103,
+		"sz_stock": 68,
+		"stock": 30
+	},
+	{
+		"code": "G",
+		"industry": "拉菲尼亚",
+		"alias": "拉菲尼亚",
+		"sh_stock": 73,
+		"sz_stock": 34,
+		"stock": 12
+	},
+	{
+		"code": "H",
+		"industry": "皮克",
+		"alias": "皮克",
+		"sh_stock": 4,
+		"sz_stock": 7,
+		"stock": 17
+	},
+	{
+		"code": "I",
+		"industry": "桑切斯",
+		"alias": "桑切斯",
+		"sh_stock": 60,
+		"sz_stock": 204,
+		"stock": 27
+	},
+	{
+		"code": "J",
+		"industry": "伊涅斯塔",
+		"alias": "伊涅斯塔",
+		"sh_stock": 64,
+		"sz_stock": 27,
+		"stock": 18
+	},
+	{
+		"code": "K",
+		"industry": "阿图尔",
+		"alias": "阿图尔",
+		"sh_stock": 74,
+		"sz_stock": 63,
+		"stock": 6
+	},
+	{
+		"code": "L",
+		"industry": "阿尔巴",
+		"alias": "阿尔巴",
+		"sh_stock": 17,
+		"sz_stock": 36,
+		"stock": 4
+	},
+	{
+		"code": "M",
+		"industry": "马尔科姆",
+		"alias": "马尔科姆",
+		"sh_stock": 20,
+		"sz_stock": 29,
+		"stock": 24
+	},
+	{
+		"code": "N",
+		"industry": "比达尔",
+		"alias": "比达尔",
+		"sh_stock": 19,
+		"sz_stock": 31,
+		"stock": 7
+	}
+]

@@ -1,0 +1,11 @@
+{
+  "code": "200",
+  "message": "成功",
+  "data":[
+    {
+      "B_CommID": "256633",
+      "B_CommCont" :  "true",
+      "B_CommMateID" :  "366572"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>欧冠淘汰赛程</title>
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+	</head>
+	
+	<body>
+		<!--<header id="header">
+			<h3 class="title">数图 - 基于ECharts V4.2</h3>
+		</header>-->
+		
+		<div id="container">
+			<div class="chart-div" id="treeChart">
+				<div class="chart-loader">
+					<div class="loader"></div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="../js/echarts.min.js"></script>
+		<script type="text/javascript" src="../js/echarts-theme-shine.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				//初始化报表对象并指定其风格
+				const treeChart = echarts.init(document.getElementById("treeChart"), 'shine');
+				//虚拟数据
+				const treeData1 = {
+					name: '巴塞罗那(3)VS利物浦(4)',
+					symbolSize: 10,
+					itemStyle: {color: '#d4237a'},
+					label: {fontSize: 14},
+					children: [
+						{
+							name: '巴塞罗那(4)VS曼联(0)',
+							symbolSize: 8,
+							itemStyle: {color: '#d4237a'},
+							children: [
+								{name: '巴萨罗那(5)VS里昂(1)', itemStyle: {color: '#d4237a'}},
+								{name: '曼联(3)VS巴黎圣日耳曼(3)', itemStyle: {color: '#d4237a'}}
+							]
+						},
+						{
+							name: '利物浦(7)VS波尔图(2)',
+							symbolSize: 8,
+							itemStyle: {color: '#d4237a'},
+							children: [
+								{name: '利物浦(3)VS拜仁慕尼黑(1)', itemStyle: {color: '#d4237a'}},
+								{name: '波尔图(3)VS罗马(2)', itemStyle: {color: '#d4237a'}}
+							]
+						}
+					]
+				};
+				const treeData2 = {
+					name: '阿贾克斯(3)VS热刺(4)',
+					symbolSize: 10,
+					itemStyle: {color: '#e6b600'},
+					label: {fontSize: 14},
+					children: [
+						{
+							name: '阿贾克斯(3)VS尤文图斯(2)',
+							symbolSize: 8,
+							itemStyle: {color: '#e6b600'},
+							children: [
+								{name: '阿贾克斯(4)VS皇家马德里(2)', itemStyle: {color: '#e6b600'}},
+								{name: '尤文图斯(3)VS马德里竞技(2)', itemStyle: {color: '#e6b600'}}
+							]
+						},
+						{
+							name: '热刺(4)VS曼城(4)',
+							symbolSize: 8,
+							itemStyle: {color: '#e6b600'},
+							children: [
+								{name: '热刺(4)VS多特蒙德(0)', itemStyle: {color: '#e6b600'}},
+								{name: '曼城(8)VS沙尔克04(0)', itemStyle: {color: '#e6b600'}}
+							]
+						}
+					]
+				};
+				const treeData = {
+					name: '利物浦(2)VS热刺(0)',
+					symbolSize: 12,
+					label: {fontSize: 16},
+					children: [
+						treeData1,
+						treeData2
+						// treeData3,
+						// // treeData4,
+						// treeData5
+					]
+				};
+				const treeChartOpt = {
+					title: {
+						text: "欧冠联赛淘汰赛赛程",
+						subtext: "19-20赛季",
+						textStyle: {
+							color: "#fff"
+						},
+						subtextStyle: {
+							fontSize: 12
+						},
+						left: 15,
+						top: 15
+					},
+					series: [
+					    {
+					    	name: '足球豪门',
+					    	type: 'tree',
+					    	left: '5%',
+					    	right: '20%',
+					    	top: '1%',
+							bottom: '1%',
+					    	orient: 'LR', //方向
+					    	initialTreeDepth: 0, //深度
+					    	symbol: 'circle',
+					    	itemStyle: {
+					    		color: '#ab2042',
+					    		borderColor: '#9aa8d4'
+					    	},
+					    	lineStyle: {
+					    		width: 1,
+					    		curveness: .9
+					    	},
+					    	label: {
+					    		color: '#9aa8d4',
+					    		position: 'bottom'
+					    	},
+					    	leaves: {
+					    		label: {
+					    			position: 'right'
+					    		}
+					    	},
+					    	data: [treeData]
+					    }
+				    ]
+				};
+				treeChart.setOption(treeChartOpt);
+				
+				//动态逐层级显示
+				let deep = 1;
+				let intervalId = window.setInterval(function() {
+					treeChart.setOption({
+						series: [{
+							name: '欧冠冠军',
+							initialTreeDepth: deep++
+						}]
+					});
+					if(deep > 3) {
+						window.clearInterval(intervalId);
+					}
+				}, 1000);
+			
+				//浏览器窗口发生变化时，重置报表大小
+				$(window).resize(function() {
+					treeChart.resize();
+				});
+			});
+		</script>
+	</body>
+</html>

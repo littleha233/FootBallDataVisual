@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+        .div{
+            width: 320px;
+            height: 400px;
+            position: absolute;
+            background:rgb(3, 12, 59) url("../image/lwp.png") 0 0 / 100% 100% no-repeat;
+            opacity: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            animation: change 4s;
+            -moz-animation: change 4s;
+            -webkit-animation: change 4s;
+            -o-animation: change 4s;
+        }
+        @keyframes change{
+            from {width: 100px;height: 100px;opacity: 1;}
+            to {width: 500px;height: 500px;opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+<div class="div"></div>
+</body>
+</html>

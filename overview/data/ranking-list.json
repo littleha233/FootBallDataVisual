@@ -1,0 +1,62 @@
+[
+	{
+		"order": 1,
+		"stock_code": "601398",
+		"stock_name": "巴塞罗那",
+		"market_capitalization": 89
+	},
+	{
+		"order": 2,
+		"stock_code": "601857",
+		"stock_name": "马德里竞技",
+		"market_capitalization": 78
+	},
+	{
+		"order": 3,
+		"stock_code": "601288",
+		"stock_name": "皇家马德里",
+		"market_capitalization": 70
+	},
+	{
+		"order": 4,
+		"stock_code": "601988",
+		"stock_name": "瓦伦西亚",
+		"market_capitalization": 68
+	},
+	{
+		"order": 5,
+		"stock_code": "601318",
+		"stock_name": "赫塔菲",
+		"market_capitalization": 67
+	},
+	{
+		"order": 6,
+		"stock_code": "600519",
+		"stock_name": "塞尔塔",
+		"market_capitalization": 62
+	},
+	{
+		"order": 7,
+		"stock_code": "600028",
+		"stock_name": "毕尔巴勒",
+		"market_capitalization": 62
+	},
+	{
+		"order": 8,
+		"stock_code": "600036",
+		"stock_name": "西班牙人",
+		"market_capitalization": 60
+	},
+	{
+		"order": 9,
+		"stock_code": "601628",
+		"stock_name": "塞维利亚",
+		"market_capitalization": 54
+	},
+	{
+		"order": 10,
+		"stock_code": "601088",
+		"stock_name": "赫罗纳",
+		"market_capitalization": 50
+	}
+]
